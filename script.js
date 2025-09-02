@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function showNotImplemented() {
     showToast(
-      '🚧 Siga-nos!  🚀',
+      '🚧 Recurso não implementado! 🚀',
       'error'
     );
   }
@@ -164,7 +164,12 @@ document.addEventListener('DOMContentLoaded', function() {
   addHoverEffects();
   formatPhoneInput();
 
-  showToast('Siga-nos', 'success');
+  const instagramLink = document.getElementById('instagram-link');
+  if (instagramLink) {
+    instagramLink.addEventListener('click', () => {
+      showToast('Siga-nos', 'success');
+    });
+  }
 
   window.scrollToForm = scrollToForm;
   window.showNotImplemented = showNotImplemented;
