@@ -57,6 +57,15 @@
   color: var(--gray-300);
 }
 
+.footer-contact .contact-item a {
+  color: var(--gray-300);
+  text-decoration: none;
+}
+
+.footer-contact .contact-item a:hover {
+  text-decoration: underline;
+}
+
 .social-links {
   display: flex;
   gap: 1rem;
@@ -107,17 +116,3 @@
   fill: none !important;
 }
 
-.footer-social .instagram-link {
-  width: auto;
-  padding: 0 0.75rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  text-decoration: none;
-  border-radius: 1.25rem;
-}
-
-.footer-social .instagram-text {
-  color: var(--green-300);
-  font-weight: 600;
-}
