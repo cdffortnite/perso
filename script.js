@@ -164,6 +164,8 @@ document.addEventListener('DOMContentLoaded', function() {
   addHoverEffects();
   formatPhoneInput();
 
+  showToast('Siga-nos', 'success');
+
   window.scrollToForm = scrollToForm;
   window.showNotImplemented = showNotImplemented;
 
