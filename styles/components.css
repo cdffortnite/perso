@@ -30,3 +30,11 @@
   background: #fef2f2;
   color: #991b1b;
 }
+
+.animate-on-scroll {
+  opacity: 0;
+}
+
+.animate-on-scroll.animate__animated {
+  opacity: 1;
+}
