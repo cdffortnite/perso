@@ -1,0 +1,76 @@
+@media (max-width: 768px) {
+  .header {
+    position: relative;
+    background: var(--gray-0);
+    box-shadow: none;
+  }
+   main {
+    margin-top: 4.5rem;             /* ajuste conforme a altura do seu header */
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .quality-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .quality-content {
+    order: 2;
+  }
+  
+  .quality-image {
+    order: 1;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .contact-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .header-content {
+    flex-direction: column;
+    gap: 2rem;
+    
+  }
+  
+  .hero-section {
+    padding-top: 10rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+  
+  .hero-title {
+    font-size: 1.75rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .benefits-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .toast {
+    right: 1rem;
+    left: 1rem;
+    max-width: none;
+  }
+}
