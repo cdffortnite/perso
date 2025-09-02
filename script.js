@@ -90,27 +90,21 @@ document.addEventListener('DOMContentLoaded', function() {
   form.addEventListener('submit', handleFormSubmit);
 
   function addScrollAnimations() {
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-    const observer = new IntersectionObserver((entries) => {
+    const observerOptions = { threshold: 0.1 };
+    const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
+          const animation = entry.target.dataset.animate;
+          entry.target.classList.add('animate__animated', `animate__${animation}`);
+          obs.unobserve(entry.target);
         }
       });
     }, observerOptions);
 
-    document
-      .querySelectorAll('.benefit-card, .testimonial-card, .stat-item')
-      .forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
-      });
+    document.querySelectorAll('[data-animate]').forEach(el => {
+      el.classList.add('animate-on-scroll');
+      observer.observe(el);
+    });
   }
 
   function initSmoothScroll() {
